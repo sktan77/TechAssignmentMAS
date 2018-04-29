@@ -20,7 +20,7 @@
 				<div id="searchSection">
 					<p>Enter the Date Range</p>
 					<p class="smallerFont">(Enter date in format <span class="italicFont">YYYY-MM</span>, only support a max range of <span class="boldFont">96months</span> (8 years))</p>
-					<form id="submitRequest" name="searchRequest" action="/search" method="post">
+					<form id="submitRequest" name="searchRequest" action="${rc.getContextPath()}/search" method="post">
 						<ul>
 							<li>
 								<label for="fromDate">From<span class="mandatory">*</span></label>
