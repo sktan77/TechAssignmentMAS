@@ -2,6 +2,18 @@
 
 This is the technical assignment to call MAS API to retrieve the bank and financial companies interest rates.  
 
+## Requirements Overview
+
+The requirement is for user to compare rates and check the trend.  For this a UI is almost a must as it will be more user friendly.  Ideally a graphs or charts is needed (open source chart like chart.js cant be used).  However, since the business requirements specifically mention no requirement to plot graphs or chart, it is not included as the assumption is user are evaluating other graphs or charts engine hence just want to see the raw data as of now.
+
+This project is created using Spring MVC + Freemarker.  It follows the standard web with the usage of JQuery in the markup.  I can't make the backend work to call the API, hence I use JQuery Ajax and send the response over to the server for processing.
+
+The application layer will be MVC plus a business layer (tsk.techassignment.process).
+
+### Requirements Met
+
+
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
