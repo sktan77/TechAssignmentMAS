@@ -1,4 +1,4 @@
-# Project Title
+# Technical Assignment on MAS API
 
 This is the technical assignment to call MAS API to retrieve the bank and financial companies interest rates.  
 
