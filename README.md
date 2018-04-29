@@ -71,53 +71,27 @@ Copy the war file from the directory and paste into tomcat/webapps folder. Once 
 ```
 
 Step 3 - Verifying deployment
-Once tomcat is started, open up a browser and navigate to http://localhost:8080/
 
-End with an example of getting some data out of the system or using it for a little demo
+Once tomcat is started, open up a browser and navigate to http://localhost:8080/tsk-ta-mas-0.0.1-SNAPSHOT
+
+Ensure you can connect to MAS API site and try entering a date range and hit the *Retrieve Interest Rate* button.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+JUnit test will be triggered whenever *mvn clean install* is run.  You can also trigger the test only by using *mvn test* command.
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+JUnit Test are mainly performed on classes that has business logic like averaging the rates, determine the trend or comparing Bank or Financial Companies provide the better rate.
 
 ```
-Give an example
+For example, for AggregateRecordsTest.java, 2 tests are written;
+1 to test that the record values will not be clear when retrieving it for Average calculation.
+
+Another 1 is to test that the calculation work as per expected. 
+
+A 3rd test is written to test against null value.
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
