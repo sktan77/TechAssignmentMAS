@@ -1,0 +1,12 @@
+/* css reset */
+body,div,dl,dt,dd,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,textarea,p,blockquote,th,td{	margin:0;padding:0;}  
+body {margin: 10px auto}
+img,abbr,acronym{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+ol,ul{list-style:none;}
+address,caption,cite,code,dfn,th,var{font-weight:normal;font-style:normal;}
+caption,th {text-align:left;font-weight:bold; padding:0 6px 0 10px;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
