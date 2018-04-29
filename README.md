@@ -8,7 +8,7 @@ The requirement is for user to compare rates and check the trend.  For this a UI
 
 This project is created using Spring MVC + Freemarker.  It follows the standard web with the usage of JQuery in the markup.  I can't make the backend work to call the API, hence I use JQuery Ajax and send the response over to the server for processing.
 
-The application layer will be MVC plus a business layer (tsk.techassignment.process).
+The application layer will be MVC plus a business layer (tsk.techassignment.process).  This is to have a clear codes are maintain at different layer and can be split or package if needed.
 
 ### Requirements Met
 
@@ -80,7 +80,7 @@ Ensure you can connect to MAS API site and try entering a date range and hit the
 
 JUnit test will be triggered whenever *mvn clean install* is run.  You can also trigger the test only by using *mvn test* command.
 
-### Break down into end to end tests
+### Brief Overview of the tests
 
 JUnit Test are mainly performed on classes that has business logic like averaging the rates, determine the trend or comparing Bank or Financial Companies provide the better rate.
 
@@ -88,9 +88,7 @@ JUnit Test are mainly performed on classes that has business logic like averagin
 For example, for AggregateRecordsTest.java, 2 tests are written;
 1 to test that the record values will not be clear when retrieving it for Average calculation.
 
-Another 1 is to test that the calculation work as per expected. 
-
-A 3rd test is written to test against null value.
+THe other test is to test the correctness of the calculation with a couple of null values throw in to ensure the logic can handle it.
 ```
 
 ## License
