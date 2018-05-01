@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import tsk.techassignment.process.ProcessRecords;
+import tsk.techassignment.service.ProcessorFactory;
+import tsk.techassignment.service.processor.RecordProcessor;
 
 
 @Controller
@@ -33,7 +34,8 @@ public class MASCompareRateController {
 		model.addAttribute(FROMMONTH, fromDate);
 		model.addAttribute(TOMONTH, toDate);
 		
-		ProcessRecords.processStart(masJsonResponse, model);
+		final RecordProcessor recordProcessor = ProcessorFactory.createProcessor(masJsonResponse, model);
+		recordProcessor.process();
 				
 	    return "mas";
 	}	    

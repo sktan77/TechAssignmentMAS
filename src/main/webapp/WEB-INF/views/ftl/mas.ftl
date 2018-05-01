@@ -19,7 +19,7 @@
 			<div id="content" class="singleColumn">
 				<div id="searchSection">
 					<p>Enter the Date Range</p>
-					<p class="smallerFont">(Enter date in format <span class="italicFont">YYYY-MM</span>, only support a max range of <span class="boldFont">96months</span> (8 years))</p>
+					<p class="smallerFont">(Enter date in format <span class="italicFont">YYYY-MM</span>, only <span class="italicFont boldFont">100</span> months of records can be retrieved at any one time)</p>
 					<form id="submitRequest" name="searchRequest" action="${rc.getContextPath()}/search" method="post">
 						<ul>
 							<li>
