@@ -13,7 +13,7 @@ The application layer will be MVC plus a business layer (tsk.techassignment.proc
 **Updated (1 May 2018)**
 After a good night rest, I re-think and was not happy with the business layer implemented.  Hence I perform some rework on it.  Mainly,
 - Refactor the processor classes such that it uses Chain-of-responsibility pattern as the original processing is actually broken down into 3 steps (Convert Json String to Java Object, calculate Average, analyze trend)
-- Create a Factor class to initialize and set up the processor classes
+- Create a Factory class to initialize and set up the processor classes
 
 ### Requirements Met
 
