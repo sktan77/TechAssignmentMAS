@@ -10,6 +10,11 @@ This project is created using Spring MVC + Freemarker.  It follows the web MVC a
 
 The application layer will be MVC plus a business layer (tsk.techassignment.process).  This is to maintain codes at different layer and can be split or package if needed.  Iterator design pattern is mostly used for calculating the average.  
 
+**Updated (1 May 2018)**
+After a good night rest, I re-think and was not happy with the business layer implemented.  Hence I perform some rework on it.  Mainly,
+- Refactor the processor classes such that it uses Chain-of-responsibility pattern as the original processing is actually broken down into 3 steps (Convert Json String to Java Object, calculate Average, analyze trend)
+- Create a Factor class to initialize and set up the processor classes
+
 ### Requirements Met
 
 * Specify Dates in format to get the data
@@ -51,7 +56,7 @@ Download the project to a local directory
 Open a command prompt and navigate to the folder where the pom.xml exist, and type mvn clean install
 ```
 
-Step 2 - deploying to tomcat
+Step 2 - deploying to tomcat (Updated 1 May 2018)
 
 ```
 Ensure the tomcat installed is working.
@@ -59,8 +64,8 @@ Ensure the tomcat installed is working.
 Once compile finish, you should see a success message and also a line mentioning where is the war file located. For example,
 
 [INFO] --- maven-install-plugin:2.4:install (default-install) @ tsk-ta-mas ---
-[INFO] Installing E:\personal\Interview\Interview_20180428\technical\Code\tsk-techassignment-mas\target\tsk-ta-mas-0.0.1-SNAPSHOT.war to C:\Users\Tan\.m2\repository\tsk\007\techassignment\tsk-ta-mas\0.0.1-SNAPSHOT\tsk-ta-mas-0.0.1-SNAPSHOT.war
-[INFO] Installing E:\personal\Interview\Interview_20180428\technical\Code\tsk-techassignment-mas\pom.xml to C:\Users\Tan\.m2\repository\tsk\007\techassignment\tsk-ta-mas\0.0.1-SNAPSHOT\tsk-ta-mas-0.0.1-SNAPSHOT.pom
+[INFO] Installing E:\personal\Interview\Interview_20180428\technical\Code\tsk-techassignment-mas\target\tsk-ta-mas-0.0.2-SNAPSHOT.war to C:\Users\Tan\.m2\repository\tsk\007\techassignment\tsk-ta-mas\0.0.1-SNAPSHOT\tsk-ta-mas-0.0.2-SNAPSHOT.war
+[INFO] Installing E:\personal\Interview\Interview_20180428\technical\Code\tsk-techassignment-mas\pom.xml to C:\Users\Tan\.m2\repository\tsk\007\techassignment\tsk-ta-mas\0.0.1-SNAPSHOT\tsk-ta-mas-0.0.2-SNAPSHOT.pom
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
@@ -71,11 +76,13 @@ Once compile finish, you should see a success message and also a line mentioning
 Copy the war file from the directory and paste into tomcat/webapps folder. Once copied, start up tomcat.
 ```
 
-Step 3 - Verifying deployment
+Step 3 - Verifying deployment 
 
-Once tomcat is started, open up a browser and navigate to http://localhost:8080/tsk-ta-mas-0.0.1-SNAPSHOT
+Once tomcat is started, open up a browser and navigate to http://localhost:8080/tsk-ta-mas-0.0.2-SNAPSHOT/
 
 Ensure you can connect to MAS API site and try entering a date range and hit the *Retrieve Interest Rate* button.
+
+**Take note the URL has changed to reflect the latest amendment**
 
 ## Running the tests
 
